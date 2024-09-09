@@ -1,12 +1,12 @@
 {
-    "name": "michael-biegalski-llc-com/notification-tracker",
+    "name": "biegalski-llc/notification-tracker",
     "description": "Notification Tracker is a Laravel package that empowers developers to seamlessly track and manage the lifecycle of user notifications. Gain valuable insights into notification status (sent, delivered, read), content, and recipient interactions.",
     "keywords": [
         "BiegalskiLLC",
         "laravel",
         "notification-tracker"
     ],
-    "homepage": "https://github.com/michael-biegalski-llc-com/notification-tracker",
+    "homepage": "https://github.com/Biegalski-LLC/Notification-Tracker",
     "license": "MIT",
     "authors": [
         {
