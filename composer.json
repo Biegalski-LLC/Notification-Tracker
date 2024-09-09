@@ -35,8 +35,7 @@
     },
     "autoload": {
         "psr-4": {
-            "BiegalskiLLC\\NotificationTracker\\": "src/",
-            "BiegalskiLLC\\NotificationTracker\\Database\\Factories\\": "database/factories/"
+            "BiegalskiLLC\\NotificationTracker\\": "src/"
         }
     },
     "autoload-dev": {

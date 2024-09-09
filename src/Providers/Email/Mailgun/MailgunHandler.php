@@ -16,7 +16,6 @@ class MailgunHandler extends EmailHandler
      * @param $content
      * @param Closure $next
      * @return mixed
-     * @throws \Exception
      */
     public function handle($content, Closure $next): mixed
     {
@@ -48,7 +47,6 @@ class MailgunHandler extends EmailHandler
     /**
      * @param $storageUrl
      * @return array
-     * @throws \Exception
      */
     private function getEmailContent($storageUrl): array
     {

@@ -4,7 +4,7 @@ namespace BiegalskiLLC\NotificationTracker;
 
 use BiegalskiLLC\NotificationTracker\Pipes\DispatchNotificationTrackerEventPipe;
 use BiegalskiLLC\NotificationTracker\Providers\Email\Mailgun\MailgunHandler;
-use BiegalskiLLC\NotificationTracker\Providers\Sms\Twilio\TwilioHandler;
+use BiegalskiLLC\NotificationTracker\Providers\Email\Postmark\PostmarkHandler;
 use Illuminate\Pipeline\Pipeline;
 
 /**
@@ -89,6 +89,17 @@ class NotificationTracker implements Process
     /**
      * @return $this
      */
+    public function postmark(): NotificationTracker
+    {
+        $this->channel = 'email';
+        $this->handler = PostmarkHandler::class;
+
+        return $this;
+    }
+
+    /**
+     * @return $this
+     */
     public function sms(): NotificationTracker
     {
         $this->channel = 'sms';
@@ -103,17 +114,6 @@ class NotificationTracker implements Process
     public function status(string $status): NotificationTracker
     {
         $this->status = $status;
-
-        return $this;
-    }
-
-    /**
-     * @return $this
-     */
-    public function twilio(): NotificationTracker
-    {
-        $this->channel = 'sms';
-        $this->handler = TwilioHandler::class;
 
         return $this;
     }
